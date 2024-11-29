@@ -3,6 +3,12 @@ import style from './Button.module.css';
 
 export default function Button(props) {
   return (
-    <button className={style.btn}>{props.title}</button>
+    <button
+      onClick={() => console.log(`click on ${props.title}`)}
+      className={style.btn}>
+      {/* testo btn */}
+      {props.title}
+
+    </button>
   );
 }

@@ -7,7 +7,6 @@
   --border-color: #E8E8E8;
 }
 
-
 /* 
 reset rules
 */
@@ -38,7 +37,18 @@ body {
   align-items: center;
 }
 
-button {
+/* button {
   border: none;
   background-color: transparent;
+} */
+
+button {
+  border: none;
+  background-color: var(--btn-color);
+  margin: 1em;
+  color: white;
+  padding: 0 0.8rem;
+  line-height: 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
