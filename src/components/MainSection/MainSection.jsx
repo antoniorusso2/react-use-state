@@ -2,14 +2,14 @@
 import Button from "../Button/Button.jsx";
 import languages from '../../data/languages.js';
 import style from './MainSection.module.css';
-// import Card from '../Card/Card.jsx';
+import Card from '../Card/Card.jsx';
 import { useState } from 'react';
-import Test from "../Test.jsx";
+// import Test from "../Test.jsx";
 
 
 export default function MainSection() {
 
-  const [text, setText] = useState('');
+  const [text, setText] = useState(languages[0].description);
 
   return (
     <main className="main_content">
@@ -31,21 +31,10 @@ export default function MainSection() {
                 key={language.id}
                 title={language.title} />
             )}
-
-            {/* {languages.map((language) => {
-              return (
-                <button onClick={() => setText(language.description)} key={language.id}>
-                  {language.title}
-                </button>
-              );
-            })} */}
           </div>
           <div className="col">
-            {/* card con descrizione per ogni banner */}
-            <div className="card">
-              <p>{text}</p>
-            </div>
-            <Test testo={text} />
+            {/* <Test testo={text} /> */}
+            <Card text={text} />
           </div>
         </div>
       </div>
