@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 import Button from "../Button/Button.jsx";
 import languages from '../../data/languages.js';
 import style from './MainSection.module.css';
@@ -33,7 +32,6 @@ export default function MainSection() {
             )}
           </div>
           <div className="col">
-            {/* <Test testo={text} /> */}
             <Card text={text} />
           </div>
         </div>
