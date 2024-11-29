@@ -9,6 +9,8 @@ import { useState } from 'react';
 export default function MainSection() {
 
   const [text, setText] = useState(languages[0].description);
+  // const [isActive, setIsActive] = useState(false);
+
 
   return (
     <main className="main_content">
@@ -26,7 +28,12 @@ export default function MainSection() {
             {languages.map((language) =>
               // button per ogni elemento nell'array di oggetti languages
               <Button
-                click={(() => setText(language.description))}
+
+                click={(() => {
+                  setText(language.description);
+                  // setIsActive(!isActive);
+                }
+                )}
                 key={language.id}
                 title={language.title} />
             )}

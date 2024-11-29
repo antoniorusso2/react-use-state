@@ -7,3 +7,7 @@
   border-radius: 0.5rem;
   cursor: pointer;
 }
+
+.active {
+  background-color: var(--active-btn)
+}
