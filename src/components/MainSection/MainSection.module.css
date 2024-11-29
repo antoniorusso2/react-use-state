@@ -1,0 +1,9 @@
+.main_title {
+  flex-basis: 100%;
+}
+
+.col_btn {
+  margin-top: 2rem;
+  display: flex;
+  column-gap: 1.2rem;
+}
