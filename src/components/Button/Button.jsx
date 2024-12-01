@@ -12,7 +12,7 @@ export default function Button({ title, click, isActive }) {
       onClick={() => {
         click();
       }}
-      className={`${isActive ? style.active : style.btn}`}
+      className={` btn ${isActive ? style.active : ''}`}
     >
       {/* testo btn */}
       {title}
