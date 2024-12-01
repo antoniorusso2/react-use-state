@@ -1,26 +1,23 @@
 /* eslint-disable react/prop-types */
 import style from './Button.module.css';
-import { useState } from 'react';
+// import { useState } from 'react';
 
-export default function Button(props) {
-  const callback = props.click;
+export default function Button({ title, click, isActive }) {
+  // const callback = props.click;
 
-  console.log(props);
-  const [isActive, setIsActive] = useState(false);
-
-  const toggleActive = () => setIsActive(!isActive);
+  // const [isActive, setIsActive] = useState(false);
 
   return (
     <button
       onClick={() => {
-        callback();
-        toggleActive();
+        click();
+        // toggleActive();
         // console.log(isActive);
       }}
       className={`${isActive ? style.active : style.btn}`}
     >
       {/* testo btn */}
-      {props.title}
+      {title}
       {/* {console.log(isActive)} */}
     </button>
   );

@@ -6,8 +6,16 @@ import { useState } from 'react';
 // import Test from "../Test.jsx";
 
 export default function MainSection() {
-  const [text, setText] = useState(languages[0].description);
+  // const [text, setText] = useState(languages[0].description);
+
+  const [currentId, setCurrentId] = useState(null);
   // const [isActive, setIsActive] = useState(false);
+
+  const currentElement = languages.find((el) => el.id === currentId);
+
+  function toggle(id) {
+    setCurrentId(currentId === id ? null : id);
+  }
 
   return (
     <main className="main_content">
@@ -24,17 +32,16 @@ export default function MainSection() {
               // button per ogni elemento nell'array di oggetti languages
               <Button
                 click={() => {
-                  setText(language.description);
+                  toggle(language.id);
                   // setIsActive(!isActive);
                 }}
                 key={language.id}
                 title={language.title}
+                isActive={currentId === language.id}
               />
             ))}
           </div>
-          <div className="col">
-            <Card text={text} />
-          </div>
+          <div className="col">{currentElement && <Card text={currentElement.description} />}</div>
         </div>
       </div>
     </main>
